@@ -3,8 +3,6 @@
  * how we want.
  * @param  array options Options array
  * @return mixed
- *
- * http://github.com/crot4lus/
  */
 $.fn.simpleSelect = function(options){
 
