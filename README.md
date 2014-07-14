@@ -52,3 +52,9 @@ $(function(){
 ###Notes
 
 If the select box doesn't display correctly, check the width of the box wrapper - it is set to fill the full width of the surrounding element.
+
+When changing the value of the select list with javascript call .change after .val
+
+```
+$('.simple-select').val(value).change();
+```
