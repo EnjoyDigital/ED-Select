@@ -56,5 +56,7 @@ If the select box doesn't display correctly, check the width of the box wrapper 
 When changing the value of the select list with javascript call .change after .val
 
 ```html
+<script>
 $('.simple-select').val(value).change();
+</script>
 ```
