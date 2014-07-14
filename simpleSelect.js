@@ -4,8 +4,8 @@
  * @param  array options Options array
  * @return mixed
  */
-$.fn.simpleSelect = function(options){
-
+$.fn.simpleSelect = function(options) {
+    'use strict';
 	var settings = $.extend({
 		'customClass': ''
 	}, options);
@@ -15,30 +15,26 @@ $.fn.simpleSelect = function(options){
 		var $select = $(this);
 
 		// Create a container for all the elements
-		var $selectWrapper = $('<div/>', {
-			'class': 'simpleSelect-box-wrapper'
-		});
+		var $selectWrapper = $('<div/>', { 'class': 'simpleSelect-box-wrapper' });
 
 		// Create the box wrapper and put the select box inside it
 		$selectWrapper.insertAfter($select);
 		$select.appendTo($selectWrapper);
 
 		// Build up the structure of the custom select box
-		$selectBox = $('<div/>', {
+		var $selectBox = $('<div/>', {
 			'class': 'simpleSelect-box ' + settings.customClass
 		}).appendTo($selectWrapper);
 
-		$selectValue = $('<div/>', {
+		var $selectValue = $('<div/>', {
 			'class': 'box-value'
 		}).appendTo($selectBox).text( $('option:selected', $select).text() );
 
-		$selectArrow = $('<div/>', {
-			'class': 'box-arrow'
-		}).appendTo($selectBox);
+		$('<div/>', {'class': 'box-arrow'}).appendTo($selectBox);
 
 		// Create event triggers
-		$select.on('change', function(){
-			$selectValue.text( $('option:selected', $select).text() );
+		$select.on('change', function () {
+		   $selectValue.text( $('option:selected', $select).text() );
 		});
 
 	});
