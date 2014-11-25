@@ -21,13 +21,15 @@ $.fn.simpleSelect = function (options) {
 
         // Build up the structure of the custom select box
         var $selectBox = $('<div/>', { 'class': 'simpleSelect-box ' + settings.customClass }).appendTo($selectWrapper);
-
         var $selectValue = $('<div/>', { 'class': 'box-value' }).appendTo($selectBox).text($('option:selected', $select).text());
+		if($select.is(':disabled')){ $selectBox.addClass('disabled'); }else{ $selectBox.removeClass('disabled'); }
 
         $('<div/>', { 'class': 'box-arrow' }).appendTo($selectBox);
 
         // Create event triggers
-        $select.on('change', function () { $selectValue.text($('option:selected', $select).text()); });
+        $select.on('change', function () { 
+			$selectValue.text($('option:selected', $select).text()); 
+		});
 
     });
 };
