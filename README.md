@@ -57,6 +57,6 @@ When changing the value of the select list with javascript call .change after .v
 
 ```html
 <script>
-$('.simple-select').val(value).change();
+$('.simple-select').trigger('change');
 </script>
 ```
