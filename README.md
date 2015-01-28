@@ -1,16 +1,16 @@
-Simple Select
+ED Select
 =========
 
-Simple select is a basic plugin that allows you to override the default look and feel of select boxes. It uses 3 divs to build up the look and feel of a select box.
+ED select is a basic plugin that allows you to override the default look and feel of select boxes. It uses 3 divs to build up the look and feel of a select box.
 
 Tested down to IE8.
 
 ###How to use
 
-Include Simple Select
+Include ED Select
 
 ```html
-<script src="js/simpleSelect.min.js"></script>
+<script src="js/edSelect.min.js"></script>
 ```
 
 ###Create your select box
@@ -29,7 +29,7 @@ Include Simple Select
 ```html
 <script>
 $(function(){
-	$('.simple-select').simpleSelect();
+	$('.simple-select').edSelect();
 });
 </script>
 ```
