@@ -4,7 +4,7 @@
  * @param  array options Options array
  * @return mixed
  */
-$.fn.simpleSelect = function (options) {
+$.fn.edSelect = function (options) {
     'use strict';
     var settings = $.extend({ 'customClass': '' }, options);
 
